@@ -1,3 +1,39 @@
+<?php
+session_start();
+include '../../config/db.php';
+
+if (!isset($_SESSION['user_id'])) {
+    echo "<script>alert('Please login to book an event!'); window.location.href='../../Auth/HTML/login.php';</script>";
+    exit();
+}
+
+if (isset($_GET['id'])) {
+    $event_id = $_GET['id'];
+    $sql = "SELECT * FROM events WHERE id = $event_id";
+    $result = $conn->query($sql);
+    $event = $result->fetch_assoc();
+} else {
+    header("Location: events.php"); 
+}
+
+if (isset($_POST['confirm_booking'])) {
+    $user_id = $_SESSION['user_id'];
+    $phone = $_POST['phone'];
+    $tickets = $_POST['tickets'];
+
+    $insertSql = "INSERT INTO bookings (user_id, event_id, phone_number, total_tickets) VALUES ('$user_id', '$event_id', '$phone', '$tickets')";
+
+    if ($conn->query($insertSql) === TRUE) {
+        echo "<script>
+                alert('Booking Confirmed Successfully!');
+                window.location.href='events.php';
+              </script>";
+    } else {
+        echo "Error: " . $conn->error;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
