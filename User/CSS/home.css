@@ -12,12 +12,11 @@ html {
 
 /* --- Banner Section Styles --- */
 .hero-banner {
-  /* একটি সুন্দর ব্যাকগ্রাউন্ড ইমেজ এবং তার উপরে কালো শেড */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1470&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
-  height: 80vh; /* স্ক্রিনের ৮০% উচ্চতা */
+  height: 80vh; 
   display: flex;
   justify-content: center;
   align-items: center;
