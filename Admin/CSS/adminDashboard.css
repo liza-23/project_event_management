@@ -58,3 +58,40 @@
             font-size: 1.2rem;
             line-height: 1;
         }
+         .table-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+       
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .custom-table thead {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dfe6e9;
+        }
+
+        .custom-table th {
+            text-align: left;
+            padding: 18px 15px;
+            color: #636e72;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f1f2f6;
+            color: #2d3436;
+            vertical-align: middle;
+            font-size: 0.95rem;
+        }
