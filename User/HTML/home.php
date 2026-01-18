@@ -1,3 +1,10 @@
+<?php
+session_start();
+include '../../config/db.php'; 
+$sql = "SELECT * FROM events ORDER BY date ASC";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,4 +51,10 @@
             <?php endif; ?>
         </div>
     </section>
+        <footer style="background:#333; color:#fff; text-align:center; padding: 20px; margin-top:50px;">
+        <p>&copy; 2024 EventSys. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
 
