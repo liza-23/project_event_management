@@ -1,3 +1,28 @@
+<?php
+session_start();
+include '../../config/db.php';
+
+if (!isset($_SESSION['user_id']) && isset($_COOKIE['user_login'])) {
+    $email = $_COOKIE['user_login'];
+    $sql = "SELECT * FROM users WHERE email='$email'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $_SESSION['user_id'] = $row['id'];
+        $_SESSION['name'] = $row['name'];
+        $_SESSION['role'] = $row['role'];
+        
+        if($row['role'] == 'admin') header("Location: ../../Admin/HTML/dashboard.php");
+        else header("Location: ../../User/HTML/home.php");
+    }
+}
+
+if(isset($_SESSION['user_id'])){
+    if($_SESSION['role'] == 'admin') header("Location: ../../Admin/HTML/dashboard.php");
+    else header("Location: ../../User/HTML/home.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +32,7 @@
     <link rel="stylesheet" href="../../Shared/CSS/navbar.css">
 </head>
 <body>
-      
+
     <?php include '../../Shared/HTML/navbar.php'; ?>
     
     <div class="login-wrapper">
