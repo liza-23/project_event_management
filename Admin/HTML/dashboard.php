@@ -1,3 +1,26 @@
+<?php
+session_start();
+include '../../config/db.php';
+
+
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
+    header("Location: ../../Auth/HTML/login.php");
+    exit();
+}
+
+
+if (isset($_GET['delete_id'])) {
+    $id = $_GET['delete_id'];
+    $conn->query("DELETE FROM events WHERE id=$id");
+    header("Location: dashboard.php");
+}
+
+$sql = "SELECT * FROM events ORDER BY date DESC";
+$result = $conn->query($sql);
+?> 
+
+
+
 <!DOCTYPE html>
 <html >
 <head>
