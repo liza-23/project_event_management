@@ -26,7 +26,6 @@ body {
     backdrop-filter: blur(5px);
 }
 
-/* Header Text */
 .register-header h2 {
     margin: 0;
     color: #333;
@@ -41,7 +40,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* Input Styles */
+
 .input-group {
     text-align: left;
     margin-bottom: 15px;
@@ -69,4 +68,39 @@ body {
     border-color: #6c5ce7;
     outline: none;
     box-shadow: 0 0 5px rgba(108, 92, 231, 0.3);
+}
+
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.login-link a {
+    color: #6c5ce7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
 }
