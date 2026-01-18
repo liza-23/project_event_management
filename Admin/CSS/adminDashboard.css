@@ -95,3 +95,54 @@
             vertical-align: middle;
             font-size: 0.95rem;
         }
+         .custom-table tbody tr:hover {
+            background-color: #fafbfc;
+        }
+
+   
+        .event-title {
+            font-weight: 600;
+            color: #2d3436;
+            font-size: 1rem;
+        }
+
+      
+        .price-tag {
+            background-color: #e17055;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+     
+        .btn-trash {
+            background-color: #fff0f0;
+            color: #d63031;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid #ffcccc;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-trash:hover {
+            background-color: #d63031;
+            color: white;
+            border-color: #d63031;
+            box-shadow: 0 2px 5px rgba(214, 48, 49, 0.3);
+        }
+
+        
+        .empty-state {
+            text-align: center;
+            padding: 50px;
+            color: #b2bec3;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
