@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+$msg_sent = false;
+if(isset($_POST['send_message'])){
+    $msg_sent = true;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,3 +43,14 @@
             </form>
         </div>
     </div>
+    <?php if($msg_sent): ?>
+    <script>
+        alert("Thank you! Your message has been received. We will contact you shortly.");
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+    <?php endif; ?>
+
+</body>
+</html>
