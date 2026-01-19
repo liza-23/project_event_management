@@ -37,3 +37,27 @@ session_start();
                 </p>
             </div>
         </div>
+
+        <div class="team-section">
+            <h2>Meet The Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <h3>Admin Team</h3>
+                    <p>Managing Operations</p>
+                </div>
+                <div class="team-card">
+                    <h3>Support Team</h3>
+                    <p>Helping Users</p>
+                </div>
+                <div class="team-card">
+                    <h3>Tech Team</h3>
+                    <p>Building the Future</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include '../../Shared/HTML/footer.php'; ?>
+
+</body>
+</html>
