@@ -103,3 +103,78 @@ body {
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
+/* Input Styles */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #6c5ce7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+/* Total Cost Display */
+.total-cost {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.total-cost span {
+    color: #6c5ce7;
+    font-size: 1.4rem;
+}
+
+/* Confirm Button */
+.btn-confirm {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-confirm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+@media (max-width: 768px) {
+    .booking-container {
+        flex-direction: column; 
+    }
+    
+    .event-details, .booking-form-card {
+        width: 100%; 
+    }
+    
+    .event-image {
+        height: 250px;
+    }
+}
