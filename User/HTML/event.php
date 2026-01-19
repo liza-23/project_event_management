@@ -1,3 +1,10 @@
+<?php
+session_start();
+include '../../config/db.php';
+$sql = "SELECT * FROM events ORDER BY date ASC";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,3 +52,12 @@
                             </a>
                         </div>
                     </div>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <p style="text-align:center; grid-column: 1/-1; color: #888;">No events available at the moment.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+
+</body>
+</html>
