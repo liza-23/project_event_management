@@ -40,9 +40,8 @@ if (isset($_POST['confirm_booking'])) {
     <meta charset="UTF-8">
     <title><?php echo $event['title']; ?> - Booking</title>
     <link rel="stylesheet" href="../../Shared/CSS/navbar.css">
-    <link rel="stylesheet" href="../CSS/bookinEvent.css">
+    <link rel="stylesheet" href="../CSS/bookingEvent.css">
 
-    
 </head>
 <body>
 

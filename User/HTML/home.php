@@ -51,10 +51,6 @@ $result = $conn->query($sql);
             <?php endif; ?>
         </div>
     </section>
-        <footer style="background:#333; color:#fff; text-align:center; padding: 20px; margin-top:50px;">
-        <p>&copy; 2024 EventSys. All Rights Reserved.</p>
-    </footer>
-
 </body>
 </html>
 
